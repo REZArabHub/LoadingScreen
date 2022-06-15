@@ -1,0 +1,243 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LoadingScreen = Instance.new("ScreenGui")
+local Background = Instance.new("ImageLabel")
+local Gradient = Instance.new("UIGradient")
+local Bar = Instance.new("Frame")
+local PercentTracker = Instance.new("TextLabel")
+local Filler = Instance.new("Frame")
+local Gradient_2 = Instance.new("UIGradient")
+local ImageLabel = Instance.new("ImageLabel")
+local status = Instance.new("Frame")
+local ImageLabel_2 = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local gamehere = Instance.new("TextLabel")
+local helloplayer = Instance.new("TextLabel")
+local Welcome = Instance.new("TextLabel")
+local playerpic = Instance.new("ImageLabel")
+local Fade = Instance.new("Frame")
+
+--Properties:
+
+LoadingScreen.Name = "LoadingScreen"
+LoadingScreen.Parent = game.CoreGui
+LoadingScreen.DisplayOrder = 1
+LoadingScreen.ResetOnSpawn = false
+
+Background.Name = "Background"
+Background.Parent = LoadingScreen
+Background.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Background.BackgroundTransparency = 1.000
+Background.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Background.Position = UDim2.new(0.334978402, 0, 0.441140026, 0)
+Background.Size = UDim2.new(0.393000007, 0, 0.418000013, 0)
+Background.Image = "rbxassetid://9915773718"
+
+Gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+Gradient.Rotation = 90
+Gradient.Name = "Gradient"
+Gradient.Parent = Background
+
+Bar.Name = "Bar"
+Bar.Parent = Background
+Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Bar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Bar.BorderSizePixel = 0
+Bar.Position = UDim2.new(0.256670833, 0, 0.703800857, 0)
+Bar.Size = UDim2.new(0, 473, 0, 32)
+
+PercentTracker.Name = "PercentTracker"
+PercentTracker.Parent = Bar
+PercentTracker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PercentTracker.BackgroundTransparency = 1.000
+PercentTracker.Position = UDim2.new(0.192075059, 0, -1.08591306, 0)
+PercentTracker.Size = UDim2.new(0, 198, 0, 25)
+PercentTracker.ZIndex = 3
+PercentTracker.Font = Enum.Font.SourceSansBold
+PercentTracker.Text = "Script Loaded: 0%"
+PercentTracker.TextColor3 = Color3.fromRGB(255, 255, 255)
+PercentTracker.TextScaled = true
+PercentTracker.TextSize = 14.000
+PercentTracker.TextWrapped = true
+
+Filler.Name = "Filler"
+Filler.Parent = Bar
+Filler.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Filler.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Filler.BorderSizePixel = 0
+Filler.Size = UDim2.new(0, 473, 0, 32)
+Filler.ZIndex = 2
+
+Gradient_2.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+Gradient_2.Rotation = 90
+Gradient_2.Name = "Gradient"
+Gradient_2.Parent = Filler
+
+ImageLabel.Parent = Background
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.Position = UDim2.new(0, 0, -0.00296159624, 0)
+ImageLabel.Size = UDim2.new(0, 754, 0, 427)
+ImageLabel.Image = "rbxassetid://9915773718"
+
+status.Name = "status"
+status.Parent = ImageLabel
+status.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+status.BorderColor3 = Color3.fromRGB(0, 0, 0)
+status.Position = UDim2.new(-0.448387146, 0, 8.77934508e-06, 0)
+status.Size = UDim2.new(0, 296, 0, 240)
+
+ImageLabel_2.Parent = status
+ImageLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel_2.Position = UDim2.new(-0.0336881056, 0, -0.00417900085, 0)
+ImageLabel_2.Size = UDim2.new(0, 315, 0, 241)
+ImageLabel_2.Image = "rbxassetid://9915773718"
+
+TextLabel.Parent = ImageLabel_2
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.Position = UDim2.new(0.0202702601, 0, 0.0249999743, 0)
+TextLabel.Size = UDim2.new(0, 308, 0, 225)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 38.000
+TextLabel.TextWrapped = true
+
+gamehere.Name = "game here"
+gamehere.Parent = ImageLabel
+gamehere.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+gamehere.BackgroundTransparency = 1.000
+gamehere.Position = UDim2.new(0.231605828, 0, 0.05193213, 0)
+gamehere.Size = UDim2.new(0, 462, 0, 63)
+gamehere.Font = Enum.Font.SourceSansBold
+gamehere.Text = "game here"
+gamehere.TextColor3 = Color3.fromRGB(255, 255, 255)
+gamehere.TextScaled = true
+gamehere.TextSize = 14.000
+gamehere.TextWrapped = true
+
+helloplayer.Name = "hello player"
+helloplayer.Parent = ImageLabel
+helloplayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+helloplayer.BackgroundTransparency = 1.000
+helloplayer.Position = UDim2.new(0.173902437, 0, 0.461533099, 0)
+helloplayer.Size = UDim2.new(0, 492, 0, 47)
+helloplayer.Font = Enum.Font.SourceSansBold
+helloplayer.Text = "playername"
+helloplayer.TextColor3 = Color3.fromRGB(255, 255, 255)
+helloplayer.TextSize = 43.000
+helloplayer.TextWrapped = true
+
+Welcome.Name = "Welcome"
+Welcome.Parent = ImageLabel
+Welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Welcome.BackgroundTransparency = 1.000
+Welcome.Position = UDim2.new(0.172576174, 0, 0.357570142, 0)
+Welcome.Size = UDim2.new(0, 492, 0, 47)
+Welcome.Font = Enum.Font.SourceSansBold
+Welcome.Text = "WELCOME BACK"
+Welcome.TextColor3 = Color3.fromRGB(255, 255, 255)
+Welcome.TextSize = 43.000
+Welcome.TextWrapped = true
+
+playerpic.Name = "playerpic"
+playerpic.Parent = ImageLabel
+playerpic.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+playerpic.BorderColor3 = Color3.fromRGB(0, 0, 0)
+playerpic.Position = UDim2.new(0.014128726, 0, 0.0207715146, 0)
+playerpic.Size = UDim2.new(0, 100, 0, 100)
+playerpic.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+Fade.Name = "Fade"
+Fade.Parent = LoadingScreen
+Fade.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Fade.BackgroundTransparency = 1.000
+Fade.Size = UDim2.new(1, 0, 1, 0)
+Fade.Visible = false
+Fade.ZIndex = 5
+
+-- Scripts:
+
+local function NFPI_fake_script() -- LoadingScreen.Client 
+	local script = Instance.new('LocalScript', LoadingScreen)
+
+	local gui = script.Parent
+	local background = gui:WaitForChild("Background")
+	local bar = background:WaitForChild("Bar")
+	local filler = bar:WaitForChild("Filler")
+	local percentage = bar:WaitForChild("PercentTracker")
+	
+	wait(1)
+	
+	for i = 1, 100 do
+	
+		wait(0.08)
+	
+		percentage.Text = "Script Loaded: " ..  i.."%"
+	
+		local formula = i/100
+	
+		filler:TweenSize(UDim2.new(formula, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, 0.08)
+	
+		if i == 99 then
+			wait(1)
+		end
+	end
+	
+	filler:TweenSize(UDim2.new(1, 0, 1, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, true)
+	
+	local tween = game.TweenService:Create(gui.Fade, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{["BackgroundTransparency"] = 0})
+	
+	wait(1.5)
+	
+	tween:Play()
+	
+	tween.Completed:wait()
+	
+	gui.Background.Visible = false
+	
+	wait(2)
+	
+	local tween = game.TweenService:Create(gui.Fade, TweenInfo.new(1.5, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{["BackgroundTransparency"] = 0})
+	
+	tween:Play()
+	
+	tween.Completed:wait()
+	
+	wait(1)
+	
+	gui:Destroy()	
+end
+coroutine.wrap(NFPI_fake_script)()
+local function ISGXWHU_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	
+	script.Parent.Text = "Owner: arab#6969" .. "\nScripter: REZ_2#3321"
+end
+coroutine.wrap(ISGXWHU_fake_script)()
+local function FSWWU_fake_script() -- gamehere.LocalScript 
+	local script = Instance.new('LocalScript', gamehere)
+
+	local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name .. " - ARAB HUB"
+	 script.Parent.Text = GameName
+end
+coroutine.wrap(FSWWU_fake_script)()
+local function QWHBW_fake_script() -- helloplayer.LocalScript 
+	local script = Instance.new('LocalScript', helloplayer)
+
+	
+	script.Parent.Text =  game.Players.LocalPlayer.Name
+end
+coroutine.wrap(QWHBW_fake_script)()
+local function WCTODTN_fake_script() -- playerpic.LocalScript 
+	local script = Instance.new('LocalScript', playerpic)
+
+	PlayerPic = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. game.Players.LocalPlayer.UserId .. "&width=420&height=420&format=png"
+	  script.Parent.Image = PlayerPic
+end
+coroutine.wrap(WCTODTN_fake_script)()
